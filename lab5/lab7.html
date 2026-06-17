@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Кодировка документа -->
+  <meta charset="utf-8">
+  <!-- Заголовок страницы -->
+  <title>Профессиональный автосервис</title>
+  <!-- Подключения таблицы стилей Bootstrap 3 -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- Подключение темы со стилями Bootstrap 3 -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <!-- Подключение таблицы стилей иконок Awesome -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <!-- Подключение таблицы стилей, в которой будем прописывать свои стили -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Подключение библиотеки jQuery для работы скриптов Bootstrap 3 -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Подключение скриптов Bootstrap 3 -->
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Основное содержимое страницы -->
+
+<!-- Основной контейнер -->
+<div class="container">
+  <!-- "Шапка" сайта -->
+  <header style="padding-top:5px;">
+    <div id="logo" style="float:left">
+      <img src="images/logo.jpg" width="75" height="75" alt="Логотип автосервиса">
+    </div>
+    <div id="contacts" style="float:right">
+      <!--Элемент i служит для вывода иконки Awesome с именем fa-mobile -->
+      <i class="fa fa-mobile fa-lg"></i> +7-777-555-35 |
+      <i class="fa fa-envelope fa-lg"></i> service.auto@mail.com
+      <!--CSS свойство margin-left задает отступ 10px слева от предыдущего элемента-->
+      <!--CSS свойство color задает цвет элементу i-->
+      <!-- <i class="fa fa-facebook-square fa-2x" style="margin-left:10px; color: blue;"></i> -->
+    </div>
+    <div class="clearfix"></div>
+  </header>
+  <!-- Навигационное меню -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-menu">
+      <ul class="nav navbar-nav">
+        <!-- Активный пункт меню "Главная" -->
+        <li class="active"><a href="#">Главная</a></li>
+        <!-- Пункт меню "О компании" -->
+        <li><a href="#main">О компании</a></li>
+        <!-- Пункт меню "Услуги" -->
+        <li><a href="#services">Наши услуги</a></li>
+        <!-- Пункт меню "Наши работы" -->
+        <li><a href="#work">Наши работы</a></li>
+      </ul>
+      <!-- Список, выровненный по правому краю -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Пункт меню "Бесплатная консультация" -->
+        <li><a  href="#" style="padding-top:8px; padding-bottom:8px;">
+          <span class="btn btn-danger"><strong>Записаться на диагностику</strong></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Нижняя часть "шапки" сайта -->
+  <div id="header-bottom" style="position:relative;">
+    <img src="images/banner.jpg" style="width:100%;" alt="Баннер автосервиса">
+    <!--Положение элемента зададим свойством top от верхнего края со значением 10% от высоты элемента header-bottom.-->
+    <div id="bannertext" style="position:absolute; top:10%; width:100%; text-align:center; color:white;">
+      <!-- Здесь будет текст с кнопкой ...-->
+      <div class="hidden-xs">
+        <h1>Ваш автомобиль в надёжных руках<br>
+          <small style="color: white;">профессиональный автосервис с гарантией качества</small>
+        </h1>
+      </div>
+      <div class="hidden-sm hidden-md hidden-lg">
+        <p class="lead">Мы предлагаем полный спектр услуг по обслуживанию и ремонту автомобилей</p>
+      </div>
+      <!-- Кнопка "Записаться на диагностику" -->
+      <a class="btn btn-danger btn-lg">Записаться</a>
+    </div>
+  </div>
+
+  <!-- Блок об услугах компании -->
+  <div id="main">
+    <!-- Задаем новый ряд, с выравниванием текста внутри него по центру с помощью CSS свойства text-align -->
+    <div class="row" style="text-align:center;">
+      <!-- Создаём заголовок h2 с текстом "О компании" -->
+      <h2>О компании</h2>
+      <!-- Создаем более крупный размер шрифта по сравнению с остальным текстом с помощью класса Bootstrap 3 "lead" -->
+      <p class="lead">Наш автосервис — ваш надёжный партнёр на дороге</p>
+      <!-- Создаем горизонтальную линию -->
+      <hr>
+      <!-- Создаем блок, состоящий из 4 колонок Bootstrap 3 -->
+      <div class="col-md-4">
+        <!-- Отображаем изображение -->
+        <img src="images/mechanic.png" width="120" height="120" alt="Автомеханик">
+        <!-- Создаём заголовок внутри колонки -->
+        <h3>Опыт и профессионализм</h3>
+        <!-- Абзац с текстом -->
+        <p>Наши мастера имеют более 10 лет опыта работы с автомобилями разных марок.
+          Мы знаем каждый болт и гайку вашего авто.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/tools.png" width="120" height="120" alt="Инструменты">
+        <h3>Современное оборудование</h3>
+        <p>В работе используем только профессиональное оборудование от ведущих производителей.
+          Диагностика и ремонт выполняются с высокой точностью.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/guarantee.png" width="120" height="120" alt="Гарантия">
+        <h3>Гарантия на все работы</h3>
+        <p>На все выполненные работы предоставляем официальную гарантию.
+          Вы можете быть уверены в качестве обслуживания.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <!-- Создание ряда, с выравниванием текста внутри блока по центру и заполнением фона цветом #f3f3f3 -->
+    <div class="row" style="text-align:center; background:#f3f3f3;">
+      <!-- Создание заголовка h2 -->
+      <h2>Наши услуги</h2>
+      <!-- Создание текста под заголовком -->
+      <p class="lead">Полный спектр услуг для вашего автомобиля</p>
+      <!-- Создание горизонтальной линии -->
+      <hr>
+      <!-- Создание 1 блока -->
+      <ul style="list-style:none; margin:15px; padding:10px; box-shadow:0 0 5px #aaa;
+          background: #FFF; border-radius: 3px; display: flow-root;">
+        <!-- display: flow-root автоматически очищает внутренние float элементы -->
+        <li class="list1_img" style="float:left; width: 36%;">
+          <img src="images/diagnostics.jpg" class="img-responsive" alt="Диагностика">
+        </li>
+        <li class="list1_desc" style="float:left; width:61%; margin-left:1em;">
+          <h3>Диагностика автомобиля</h3>
+          <p>Проводим полную компьютерную диагностику всех систем автомобиля.
+            Выявляем скрытые неисправности и даём рекомендации по их устранению.</p>
+        </li>
+      </ul>
+      <!-- Создание 2 блока -->
+      <ul style="list-style:none; margin:15px; padding:10px; box-shadow:0 0 5px #aaa;
+background: #FFF; border-radius: 3px; display: flow-root;">
