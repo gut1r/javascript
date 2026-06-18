@@ -17,27 +17,7 @@ export function getDecimal(num) {
  * @param {string} url - Исходный URL-адрес.
  * @returns {string} Нормализованный URL-адрес с протоколом https.
  */
- public static double[] divmod(int dividend, int divisor) {
-    // Проверка деления на ноль
-    if (divisor == 0) {
-        return new double[]{Double.NaN, Double.NaN};
-    }
-
-    // Вычисление частного и остатка
-    int quotient = dividend / divisor;
-    int remainder = dividend % divisor;
-
-    // Корректировка для случаев, когда знаки делимого и делителя различаются
-    // и остаток не равен нулю — чтобы соответствовать ожидаемым результатам
-    if ((dividend < 0 && divisor > 0 && remainder != 0) ||
-        (dividend > 0 && divisor < 0 && remainder != 0)) {
-        quotient += 1;
-        remainder -= divisor;
-    }
-
-    return new double[]{quotient, remainder};
-}
-
+ 
 export function normalizeUrl(url) {
    if (url.startsWith('http://')) {
     return 'https://' + url.slice(7);
