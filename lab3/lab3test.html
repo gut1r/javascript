@@ -28,6 +28,7 @@
         import {
             getDecimal,
             normalizeUrl,
+            divmod,
             checkSpam,
             truncate,
             camelize,
@@ -71,6 +72,27 @@
             });
 
         });
+        describe("divmod", function () {
+
+    it("divmod(7, 3) => [2, 1]", function () {
+        assert.deepEqual(divmod(7, 3), [2, 1]);
+    });
+
+    it("divmod(-7, 3) => [-3, 2]", function () {
+        assert.deepEqual(divmod(-7, 3), [-3, 2]);
+    });
+
+    it("divmod(7, -3) => [-3, -2]", function () {
+        assert.deepEqual(divmod(7, -3), [-3, -2]);
+    });
+
+    it("divmod(0, 0) => [NaN, NaN]", function () {
+        const result = divmod(0, 0);
+        assert.isNaN(result[0]);
+        assert.isNaN(result[1]);
+    });
+
+});
 
         describe("checkSpam", function () {
 
