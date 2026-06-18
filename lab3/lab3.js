@@ -34,7 +34,7 @@ export function normalizeUrl(url) {
  */
 export function divmod(dividend, divisor) {
     // Проверка деления на ноль
-    if (divisor === 0) {
+    if (divisor === 0) 
         return [NaN, NaN];
     }
 
