@@ -34,13 +34,13 @@ export function normalizeUrl(url) {
  */
 export function divmod(dividend, divisor) {
     // Проверка деления на ноль
-    if (divisor === 0) 
+    if (divisor === 0) { 
         return [NaN, NaN];
     }
 
     // Вычисление частного и остатка
-    const quotient = Math.trunc(dividend / divisor);
-    let remainder = dividend % divisor;
+    let quotient = Math.floor(dividend / divisor);
+    let remainder = dividend-quotient * divisor;
 
     // Корректировка для случаев с разными знаками и ненулевым остатком
     if ((dividend < 0 && divisor > 0 && remainder !== 0) ||
