@@ -17,7 +17,7 @@ export function getDecimal(num) {
  * @param {string} url - Исходный URL-адрес.
  * @returns {string} Нормализованный URL-адрес с протоколом https.
  */
-public static double[] divmod(int dividend, int divisor) {
+ public static double[] divmod(int dividend, int divisor) {
     // Проверка деления на ноль
     if (divisor == 0) {
         return new double[]{Double.NaN, Double.NaN};
