@@ -8,7 +8,7 @@ export function pow(x, n) {
         result *= x;
     }
     return result;
-}
+} 
 
 // Функция sumTo(n), которая для данного натурального n вычисляет сумму чисел от 1 до n включительно.
 export function sumTo(n) {
