@@ -17,7 +17,6 @@ export function getDecimal(num) {
  * @param {string} url - Исходный URL-адрес.
  * @returns {string} Нормализованный URL-адрес с протоколом https.
  */
- 
 export function normalizeUrl(url) {
    if (url.startsWith('http://')) {
     return 'https://' + url.slice(7);
