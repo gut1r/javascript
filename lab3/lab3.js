@@ -26,7 +26,32 @@ export function normalizeUrl(url) {
    }
    return 'https://' + url;
 }
+/**
+ * Делит числа с остатком
+ * @param {number} dividend — делимое
+ * @param {number} divisor — делитель
+ * @returns {Array<number>} массив [частное, остаток]
+ */
+export function divmod(dividend, divisor) {
+    // Проверка деления на ноль
+    if (divisor === 0) {
+        return [NaN, NaN];
+    }
 
+    // Вычисление частного и остатка
+    const quotient = Math.trunc(dividend / divisor);
+    let remainder = dividend % divisor;
+
+    // Корректировка для случаев с разными знаками и ненулевым остатком
+    if ((dividend < 0 && divisor > 0 && remainder !== 0) ||
+        (dividend > 0 && divisor < 0 && remainder !== 0)) {
+        const adjustedQuotient = quotient + 1;
+        remainder = dividend - (adjustedQuotient * divisor);
+        return [adjustedQuotient, remainder];
+    }
+
+    return [quotient, remainder];
+}
 /**
  * Проверяет строку на наличие спам-слов ('viagra' или 'xxx').
  * Регистр символов не учитывается.
